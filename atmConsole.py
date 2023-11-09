@@ -26,7 +26,7 @@ while(True):
             continue
         elif(w>10000):
             otp=int(input("Enter OTP"))
-            if(len(otp>4 and otp<4)):
+            if(len(otp>4 or otp<4)):
                 print("Error.")
                 continue
         balance=balance-w
