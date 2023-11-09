@@ -1,17 +1,17 @@
 l=[]
-balance=1000
+balance=1000000
 while(True):
     choice=int(input("Choose option:\n1:Deposite\n2:Withdraw\n3:Ministatement\n4:Exit "))
     if(choice==1):
         amt=int(input("Enter amount: "))
         if(amt%100!=0):
-            print("Enter valid amount")
+            print("Amount cannot be deposited.")
             continue
         else:
             denomination=int(input("Enter denomination: "))
             total_notes=amt/denomination
             if(total_notes>200):
-                print("Error.")
+                print("Exceded note limit.")
                 continue
             balance=balance+amt
             print(f"{amt} deposited successfully")
@@ -22,12 +22,12 @@ while(True):
     elif(choice==2):
         w=int(input("Enter amount to be withdrawal"))
         if(w>balance or w%100!=0):
-            print("Error.")
+            print("Insufficient balance.")
             continue
         elif(w>10000):
-            otp=int(input("Enter OTP"))
-            if(len(otp>4 or otp<4)):
-                print("Error.")
+            otp=input("Enter OTP")
+            if(len(otp)>4 or len(otp)<4):
+                print("Invalid OTP")
                 continue
         balance=balance-w
         print(f"{w} deducted from account.")
