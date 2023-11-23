@@ -15,6 +15,10 @@ while(True):
     elif(c==2):
         n=input("Enter goods name ")
         q=int(input("Enter quantity "))
+        if n in name:
+            i=name.index(n)
+            quantity[i]=quantity[i]+q
+            continue
         t=int(input("Enter unit price "))
         name.append(n)
         quantity.append(q)
@@ -38,6 +42,3 @@ while(True):
     elif(c==5):
         print("Program terminated.")
         sys.exit()
-
-
-
