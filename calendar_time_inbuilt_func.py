@@ -3,8 +3,8 @@
 import calendar
 import datetime
 import time
-m=1
-y=0
+m=9
+y=2004
 print(calendar.month(y,m))                      ## prints the calendar
 print(datetime.datetime.now())                  ## prints current date and time
 print(time.gmtime())                            ## prints date and time
