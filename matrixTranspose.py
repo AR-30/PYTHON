@@ -2,6 +2,7 @@
 
 n=int(input("Enter matrix size: "))
 a=[]
+print("Enter matrix elements: ")
 for i in range(n):
     m=[]
     for j in range(n):
