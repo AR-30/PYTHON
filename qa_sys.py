@@ -1,3 +1,10 @@
+#QUESTION ANSWERING TASK USING PRE TRAINED MODELS
+
+"""libraries installation:  
+    1. pip install transformers
+    2. pip install torch  
+"""
+
 from transformers import pipeline
 
 # Load a pre-trained QA model
